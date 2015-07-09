@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> лаб раб 1 </title> <!имя страницы>
+</head>
+<body>
+<form name="forma1">
+ЗАДАНИЕ 187 <br /><br />
+Введите натуральное число n <input type="text" name="n" size="10" /><br /><br />
+Введите последовательности a1, ... ,an <input type="text" name="a" size="10" /><br /><br />
+! Внимание числа вводятся через пробел !<br /><br />
+<input type="button" value="вычислить" onclick="ar()" /><br /><br />
+ответ<input type="text" name="res" size="20" value="" /> <br /><br />
+</form>
+<script>
+function ar ()
+{
+	var n = parseInt(document.forma1.n.value);
+	arr = document.forma1.a.value.split(' ');
+		for(var i=0;i<arr.length;i++)
+		{
+			if(arr[i]<0)
+			{
+				arr[i]=parseFloat(arr[i])+0.5;
+			}
+			else if (i>=0)
+			{
+				arr[i]=0.1;
+			}
+		}			
+	document.forma1.res.value = arr;
+}
+</script>
+</body>
+</html>
